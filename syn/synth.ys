@@ -1,0 +1,19 @@
+read_verilog -sv rtl/tdoa_mac.sv
+read_verilog -sv rtl/tdoa_correlator.sv
+read_verilog -sv rtl/tdoa_apb_wrapper.sv
+
+hierarchy -check -top tdoa_apb_wrapper
+
+proc
+opt
+fsm
+opt
+memory
+opt
+techmap
+opt
+
+clean
+
+write_verilog syn/tdoa_apb_netlist.v
+stat

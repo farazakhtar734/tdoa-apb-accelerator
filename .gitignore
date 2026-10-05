@@ -1,0 +1,12 @@
+# Simulation binaries and waveform dumps
+sim/*.vcd
+sim/*_sim
+*.vcd
+
+# Tool logs and temp files
+*.log
+syn/synth.log
+
+# OS artifacts
+.DS_Store
+*~
